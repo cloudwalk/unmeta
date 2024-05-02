@@ -1,4 +1,4 @@
-package com.github.oliverjonas.unmeta
+package io.cloudwalk.unmeta
 
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.GradleException

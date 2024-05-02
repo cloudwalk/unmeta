@@ -4,7 +4,7 @@ apply plugin: 'java-gradle-plugin'
 apply plugin: 'kotlin'
 
 def getGroup = { ->
-    return 'com.github.oliverjonas'
+    return 'io.cloudwalk'
 }
 
 def getArtifact = { ->
@@ -12,7 +12,7 @@ def getArtifact = { ->
 }
 
 def getVersion = { ->
-    return '1.0.2'
+    return '1.1.0'
 }
 
 buildscript {
@@ -67,21 +67,5 @@ publishing {
     }
     repositories {
         jcenter()
-    }
-}
-
-bintray {
-    user = System.getenv('BINTRAY_USER')
-    key = System.getenv('BINTRAY_KEY')
-    publications = ['Publication']
-    pkg {
-        repo = 'maven'
-        name = 'unmeta'
-        userOrg = user
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/oliver-jonas/unmeta.git'
-        version {
-            name = getVersion()
-        }
     }
 }
